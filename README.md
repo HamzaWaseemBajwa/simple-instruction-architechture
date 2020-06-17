@@ -1,27 +1,31 @@
 # Simple Instruction Architechture (SIA)
 SIA is a simple RISC assembly language based on MIPS. SIA is designed as a beginner friendly language to quickly learn fundamental assembly and low-level programming concepts. 
 
-SIA Instructions 
+## SIA Instructions 
 
-- add (opcode 1)
+- **add** 
+	(opcode 1)
 	Adds the values of 2 registers and places the answer in a third register. 
-	Example: add r1 r2 r3 ; r3  r1 + r2
-	Instruction format: 3R
+	- Example: add r1 r2 r3 ; r3  r1 + r2
+	- Instruction format: 3R
 
-- addimmediate (opcode 9)
+- **addimmediate** 
+	(opcode 9)
 	Adds a signed 8 bit value to a register
-	Example: addimediate r1 -127 ; adds -127 to r1
-	Instruction format: ai
+	- Example: addimediate r1 -127 ; adds -127 to r1
+	- Instruction format: ai
 
-- and (opcode 2)
+- **and** 
+	(opcode 2)
 	Preforms a bitwise and on 2 registers and stores the result in a third register
-	Example: and r1 r2 r3 ; r3  r1 & r2
-	Instruction format: 3R
+	- Example: and r1 r2 r3 ; r3  r1 & r2
+	- Instruction format: 3R
 
-- branchifequal (opcode 10)
-Compares two registers – if they hold the same value, jump to an offset from the current program counter. The offset can be between -524,286 and 524,286. The offset is the number of words (2 bytes) forward or back. PC <= PC + (2 * offset).
-Example: branchifequal r1 r2 1000 
-Instruction format: br
+- **branchifequal**
+	(opcode 10)
+	Compares two registers – if they hold the same value, jump to an offset from the current program counter. The offset can be between -524,286 and 524,286. The offset is the number of words (2 bytes) forward or back. PC <= PC + (2 * offset).
+	- Example: branchifequal r1 r2 1000 
+	- Instruction format: br
 
 - branchifless (opcode 11)
 Compares two registers – if the first is less than the second, jump to an offset from the current program counter. The offset can be between -524,286 and 524,286. The offset is the number of words (2 bytes) forward or back. PC <= PC + (2 * offset).
